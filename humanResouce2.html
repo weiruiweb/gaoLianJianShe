@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>高联建设</title>
+<!-- custom-theme -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+<!-- //custom-theme -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/basic.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/hover.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/animate.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="fonts/flat-icon/font/flaticon.css" rel="stylesheet">
+<script src="js/browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/base.js" type="application/javascript"></script>
+
+<style> 
+
+</style>
+</head>
+<body>
+  <div id="app">
+<header >
+    <nav class="navbar navbar-default">
+      <div class="container">
+            <div class="navbar-header">
+               
+                  <a href="#"><img src="images/logo.jpg"/></a>
+        
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="./index.html" class="active">首页</a></li>
+                    <li class="dropdown"><a href="./introduce.html" class="dropdown-toggle" data-toggle="dropdown">企业概况<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="./introduce.html">公司简介</a></li>
+                            <li>
+                                <a href="./introduce.html">企业文化</a></li>
+                            <li>
+                                <a href="./introduce.html">发展历程</a></li>
+                            <li>
+                                <a href="./introduce.html">认证体系</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./results.html">业绩展示</a></li>
+                    <li><a href="./humanResouce.html">人力资源</a></li>      
+                    <li><a href="./honors.html">荣誉资质</a></li>
+                    <li><a href="./message.html">在线留言</a></li>
+                    <li><a href="./contact.html">联系方式</a></li>      
+                </ul>
+            </div>
+      </div>
+    </nav>
+</header>
+<div class="banners" v-for="item in bannerData">
+    <img :src="item.img[1]['url']" alt="" class="img-responsive">
+    <div class="banner_word">
+        <p>人力资源</p>
+        <span></span>
+    </div>
+</div>
+<div class="introduce">
+    <div class="container">
+        <div class="introduce_left jobs_left">
+            <div class="col-md-3 col-sm-3 col-xs-12" id="jobsClick">
+                
+                    <div class="jobWrap">
+                       <div class="img_left" v-for="item in mainDatas" :class="searchItem.id == item.id?'active':'' ">
+                            <div :data-id="item.id" @click="changeMenu">
+                              <img :src="item.img[0]['url']"  class=" hidden-xs" :data-id="item.id" @click="changeMenu">  
+                              <div class="portfoli-content hidden-xs" :data-id="item.id" @click="changeMenu">  
+                              </div>
+                              <p  :data-id="item.id" @click="changeMenu">{{item.title}}</p><span class="ico_right hidden-xs" :data-id="item.id" @click="changeMenu"> >> </span>
+                             </div>
+                       <!--  </div> -->
+                      </div>
+                    </div>
+               
+            </div>    
+        </div>
+        <div class="introduceAll jobs_right col-md-9 col-sm-9 col-xs-12"  id="tab-engineer1">
+            <div class="introduce_right this-item">
+               
+                    <div class="vertLine"></div>
+                   <div class="jobs_sort" v-for="(item, index) in containData" :class="index=='0'?'active':''">
+                     <img :src="item.img[0]['url']" alt="">
+                     <div class="jobsname">
+                     <h4>{{item.title}}</h4>
+                      <span></span>
+                    </div>
+                    <div class="jobs_cont" v-html="item.article_content.content">
+                     
+                    </div>
+                    <div class="jobs_cont jobs_must">
+                      
+                    </div>
+                   </div> 
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="footter">
+    <div class="container">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="fotter_left">
+                <h6>陕西高联建设有限公司</h6>
+                <a>邮箱：363247569@qq.com</a>
+                <a>地址：西安市未央区未央路80号盛龙广场 1栋1单元24层12401号</a>
+                <p>石油化工工程施工总承包；机电工程施工总承包；建筑工程施工总承包；市政公用工程施工总承包；水利水电工程施工总承包电子与智能化工程专业承包；桥梁工程专业承包；隧道工程专业承包；公路路基工程专业。</p>
+
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+             <div class="fotter_right">
+                 <a>Copyright©高联集团有限公司. All rights reserved. Powered by Webfoss.
+                    <a>版权所有：陕西高联建设有限公司
+                <a>备案号：陕ICP备00000000号-1</a>
+             </div>
+        </div>
+    </div>
+</div>    
+</div>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript " src="js/bootstrap.js"></script>
+<script src="js/jquery.SuperSlide.2.1.js"></script>
+<script src="js/scrollReveal.js"></script>
+<script src="js/my.js"></script>
+<script src="js/rem.js"></script>
+<script type="text/babel">
+      var app = new Vue({
+        el: '#app',
+        data: function() {
+          return {
+            bannerData: [],
+            mainDatas: [],
+            containData:  [],
+            paginate: {
+              count: 0,
+              currentPage: 1,
+              pagesize: 6,
+              is_page: true,
+            },
+            searchItem:{
+              thirdapp_id: 25,
+              menu_id: 317,
+            },
+            pageArray:[],
+            allPages:0,
+            linkPage:'',
+          }
+
+        },
+        
+        created: function () {
+            this.getMainData();
+            this.getBannerData();
+            this.getContainData();
+        },
+        methods:{
+
+          getMainData(){
+            var self = this;
+            var postData = window.base.cloneForm(self.paginate);
+            postData.searchItem = window.base.cloneForm(self.searchItem);
+            var callback = (res)=>{
+              self.mainDatas = res.data;
+              self.paginate['count'] = res.total;
+              window.base.computePageArr(self);
+            };
+            window.base.articleList(postData,callback);
+          },
+
+          getBannerData() {
+            var self = this;
+
+            var postData ={
+                count: 0,
+                currentPage: 1,
+                pagesize:6,
+                is_page:true,
+                searchItem:{
+                thirdapp_id:25,
+                id:575
+              }
+              };
+
+            var callback = (res)=>{
+              self.bannerData = res.data;
+            };
+            window.base.articleList(postData,callback);
+          },
+          
+          getContainData(ids){
+             var self = this;
+
+            var postData ={
+                count: 0,
+                currentPage: 1,
+                pagesize:6,
+                is_page:true,
+                searchItem:{
+                thirdapp_id:25,
+                menu_id:317,
+                id:ids, 
+              }
+              };
+              var ids = window.base.GetRequest().id;
+              postData.id = ids;
+              console.log(postData);
+            var callback = (res)=>{
+              self.containData = res.data;
+              console.log(self.containData);
+            };
+            window.base.articleList(postData,callback);
+        },
+
+          changeMenu(e){
+            var self = this;
+            self.paginate = {
+              count: 0,
+              currentPage: 1,
+              pagesize: 6,
+              is_page: true,
+            };
+            self.searchItem.id  = window.base.getDataSet(e).id;
+            var ids = self.searchItem.id;
+            self.getContainData(ids);
+          },
+          
+        
+          
+        }
+      });
+      
+   
+
+  </script> 
+
+<script>
+window.scrollReveal = new scrollReveal({reset: true});
+</script>
+<!-- <script type="text/javascript">
+$(window).resize(function(){	
+	window.location.reload(); //刷新当前页面	
+});
+ 
+</script> -->
+
+</body>
+</html>

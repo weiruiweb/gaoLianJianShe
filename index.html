@@ -1,0 +1,658 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- custom-theme -->
+<meta name="baidu-site-verification" content="z8EeuYl0nS" />
+<title>高联建设</title>
+<meta name='description' content='高联建设'/>
+<meta name='keywords' content='高联建设' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/loader.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/basic.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/hover.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/animate.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="seo/sitemap.txt">
+<link href="seo/sitemap.xml">
+<link href="seo/sitemaphtml.txt">
+<script src="js/browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/base.js" type="application/javascript"></script>
+<style> 
+
+</style>
+</head>
+<body>
+<div class="hiddenDiv">
+    <h1>
+        <img src="images/seo.jpg" alt="高联建设">
+        陕西高联建设有限公司，与2014年4月15日注册成立，拥有化工石油施工总承包二级，机电工程施工总承包二级，建筑工程施工总承包二级等，专业承包，环保工程承包三级，钢结构工程承包三级....
+    </h1>
+</div>
+<div id="app">
+<header >
+    <nav class="navbar navbar-default">
+    	<div class="container">
+            <div class="navbar-header">
+               
+                	<a href="./index.html"><img src="images/logo.jpg" alt="高联建设"/></a>
+        
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="./index.html" class="active">首页</a></li>
+                    <li class="dropdown" id="dropdown" onmouseover="showMenu()" onmouseout="hideMenu()"><a href="./introduce.html" class="dropdown-toggle" data-toggle="dropdown">企业概况<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="./introduce.html">公司简介</a></li>
+                            <li>
+                                <a href="./introduce.html">企业文化</a></li>
+                            <li>
+                                <a href="./introduce.html">发展历程</a></li>
+                            <li>
+                                <a href="./introduce.html">认证体系</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./results.html">业绩展示</a></li>
+                    <li><a href="./humanResouce.html">人力资源</a></li>      
+                    <li><a href="./honors.html">荣誉资质</a></li>
+                    <li><a href="./contact.html">联系我们</a></li>      
+                </ul>
+            </div>
+    	</div>
+    </nav>
+</header>
+
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" v-if="bannerData[0]&&bannerData[0].bannerImg">
+
+    <ol class="carousel-indicators">
+        <li v-for="(item, index) in bannerData[0].bannerImg" data-target="#carousel-example-generic" :data-slide-to="index" :class="index=='0'?'active':''"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+        <div v-for="(item, index) in bannerData[0].bannerImg" class="item" :class="index=='0'?'active':''" >
+          <img :src="item.url" alt="..." class="img-responsive">
+        </div>
+    </div>
+
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+</div> 
+
+<div class="situation" id="introduce">
+    <div class="container">
+        <div class="buildingTitle">
+            <h2>企业概况</h2>
+        </div>
+        <div class="situation_cont">
+            <div class="introduce animated" v-if="introduceData[0]&&introduceData[0].relationinfo" >
+                <div class="col-md-5 col-sm-5 col-xs-12 intro_right" style="float: right;">
+                    <a class="intrduce_word"   href="./introduce.html">
+                            <h3>{{introduceData[0].relationinfo.title}}</h3>
+                            <span></span>
+                            <p>{{introduceData[0].relationinfo.keywords}}</p>
+                    </a>
+                </div>
+                <div class="col-md-7 col-sm-7 col-xs-12 introduce_left" style="float: left">
+                        <img :src="introduceData[0].relationinfo.bannerImg[0]['url']" alt="..." class="img-responsive" >
+                 </div>
+                 
+            </div>
+            <div class="clear"></div>
+            <div class="culture animated" v-if="introduceData[1]&&introduceData[1].relationinfo" id="culture">
+                 <div class="culture_left">
+                    <div class="col-md-5 col-sm-5 col-xs-12 fadeRightQuick">
+                        <a class="intrduce_word"  href="./introduce.html">
+                                <h3>{{introduceData[1].relationinfo.title}}</h3>
+                                <span></span>
+                                <p>{{introduceData[1].relationinfo.keywords}}</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="culture_right">
+                    <div class="col-md-7 col-sm-7 col-xs-12 fadeLeftQuick">
+                             <img :src="introduceData[1].relationinfo.bannerImg[0]['url']" alt="..." class="img-responsive">
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+<div class="clear"></div>
+<div class="resuilt" id="resuilts">
+        <div class="buildingTitle">
+            <h2>业绩展示</h2>
+        </div>
+        <div class="resuiltCase">
+            <div class="caseBig">
+                <div class="case1" v-if="caseData[4]&&caseData[4].relationinfo">
+                    <img :src="caseData[4].relationinfo.bannerImg[0]['url']">
+                    <div class="caseWord">
+                        <p>{{caseData[4].relationinfo.description}}</p>
+                        <a  href="./results.html"><img src="images/more.png" class="img-responsive" style="width:37px;height: 37px;"></a>
+                    </div>
+                     
+                </div>
+            </div>
+            <div class="case2">
+                <div class="caseTop">
+                    <div class="caseTleft maskIndex" v-if="caseData[3]&&caseData[3].relationinfo">
+                      <img :src="caseData[3].relationinfo.bannerImg[0]['url']"> 
+                      <a  href="./results.html"></a> 
+                    </div>
+                    <div class="caseTright maskIndex"  v-if="caseData[2]&&caseData[2].relationinfo">
+                        <img :src="caseData[2].relationinfo.bannerImg[0]['url']"> 
+                         <a  href="./results.html"></a>   
+                    </div>
+                </div>
+                <div class="caseBottom">
+                     <div class="caseBleft maskIndex"  v-if="caseData[0]&&caseData[0].relationinfo">
+                     <img :src="caseData[0].relationinfo.bannerImg[0]['url']"> 
+                       <a  href="./results.html"></a> 
+                    </div>
+                    <div class="caseBright maskIndex"  v-if="caseData[1]&&caseData[1].relationinfo">
+                       <img :src="caseData[1].relationinfo.bannerImg[0]['url']"> 
+                         <a  href="./results.html"></a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+ <div class="clear"></div>
+<div class="companyJob" id="companyJob">
+    <div class="container">
+        <div class="buildingTitle">
+            <h2>人才招聘</h2>
+        </div>
+        <div class="jobUser">
+            <div class="">
+                <div v-for="item in themeJOb" class="jobUserSort"> 
+                    <div class="usrImg col-md-2 col-sm-2 col-xs-2 fadeInUpQuick" @click="intoDetail" :data-id="item.id">
+                        <img :src="item.relationinfo.bannerImg[0]['url']"  @click="intoDetail" :data-id="item.id">
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-xs-10 fadeInUpQuick"  @click="intoDetail" :data-id="item.id">
+                        <h5  @click="intoDetail" :data-id="item.id">{{item.name}}</h5>
+                        
+                        <div class="indexWord" v-html="item.relationinfo.description "  @click="intoDetail" :data-id="item.id"></div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12 fadeInUpQuick"  @click="intoDetail" :data-id="item.id"> <a href="#" class="join" :data-id="item.id">立即加入</a></div>
+                </div>
+            </div>
+           
+        </div>
+    
+        
+    </div>
+</div>
+<div class="onlineMess" id="onlineMess">
+    <div class="container">
+        <div class="col-md-8 col-sm-8 col-xs-12 honor">
+            <div class="honorTitle">
+                <h2>荣誉资质</h2>
+                <div class="thread_bottom"></div>
+            </div>
+            <ul class="clear MessRight">
+                <li class="col-md-4 col-sm-4 col-xs-4" v-for="item in honorData"  @click="intoDetail1" :data-id="item.id">
+                    <img :src="item.relationinfo.img[0]['url']" class="img-responsive"  @click="intoDetail1" :data-id="item.id">
+                </li>
+              
+            </ul>
+        </div>
+         
+        <div class="col-md-4 col-sm-4 col-xs-12 ">
+            <div class="messageOnline">
+                <div class="honorTitle">
+                    <h2>在线留言</h2>
+                    <div class="thread_right"></div>
+                </div>
+                <div class="vert_thread hidden-xs hidden-sm">   </div>
+                <form class="form-group">
+                    <input type="" name="" placeholder="姓名"  class="form-control" id="name">
+                    <input type="" name="" placeholder="电话" class="form-control" id="phone">
+                    <input type="" name="" placeholder="留言" class="form-control" id="mesCont">
+                    <button class="btn btn-primary" id="mesSub" v-on:click="getMessage">提交</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</div>
+<div class="footter other_footer">
+    <div class="container">
+        <div class="fotter_top col-md-8 col-xs-12">
+          <ul class="col-md-4 col-sm-4 col-xs-12">
+            <li>石油化工工程总承包</li>
+            <li>市政公用工程总承包</li>
+            <li>钢结构工程专业承包</li>
+            <li>消防设施工程专业承包</li>
+          </ul>
+          <ul class="col-md-4 col-sm-4 col-xs-12">
+            <li>机电工程总承包</li>
+            <li>水利水电工程总承包</li>
+            <li>环保工程专业承包</li>
+            <li>防水防腐保温工程专业承包</li>
+          </ul>
+          <ul class="col-md-4 col-sm-4 col-xs-12">
+            
+            <li>建筑工程总承包</li>
+            <li>公路工程总承包</li>
+            <li>园林绿化工程施工</li>
+            <li class="hidden-xs" style="color: #f5f5f5;">.</li>
+          </ul>
+          <ul class="col-md-12 col-sm-12 col-xs-12 other_li" style="">
+             <li>压力管道工程GA1乙级、GB2(2)、GB1(含PE专项)、GC1</li>   
+          </ul>
+           
+        </div>
+        <div class=" col-md-4 col-xs-12 footer_address">
+             <ul class="col-md-12 col-sm-12 col-xs-12" style="border:none;">
+            
+            <li>陕西高联建设有限公司</li>
+            <li>邮箱：363247569@qq.com</li>
+            <li>地址：西安市未央区未央路80号盛龙广场 1幢1单元24层12401号</li>
+          </ul>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+             <div class="fotter_right">
+                 <a>Copyright©陕西高联建设有限公司. All rights reserved. Powered by Webfoss.
+                    <a>版权所有：陕西高联建设有限公司
+                <a>备案号：陕ICP备00000000号-1</a>
+                <a href="http://www.solelytech.com/">技术支持:  西安纯粹科技公司</a>
+             </div>
+        </div>
+    </div>
+</div>    
+</div>
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+    <div class="load_title">高联建设<br></div>
+</div>
+
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript " src="js/bootstrap.js"></script>
+<script src="js/jquery.SuperSlide.2.1.js"></script>
+<script src="js/scrollReveal.js"></script>
+<script src="js/my.js"></script>
+<script src="js/rem.js"></script>
+<script type="text/babel">
+            var app = new Vue({
+                el: '#app',
+                data: function() {
+                    return {
+                        bannerData: [],
+                        mainData: [],
+                        caseData: [],
+                        introduceData: [],
+                        cultureData: [],
+                        honorData: [],
+                        messData:[],
+                        themeJOb:[],
+                        paginate: {
+                            count: 0,
+                            currentPage: 1,
+                            pagesize: 6,
+                            is_page: true,
+                        },
+                        searchItem:{
+                            thirdapp_id: 25,
+                            menu_id: 317,
+                        },
+                        pageArray:[],
+                        allPages:0,
+                        linkPage:'',
+                    }
+
+                },
+                
+                created: function () {
+
+                    this.getMainData();
+                    this.getCaseData();
+                    this.getBannerData();
+                    this.getIntroduceData();
+                    this.getCultureData();
+                    this.getHonorData();
+                    this.getMessage();
+                    this.getThemeJob();
+                },
+                methods:{
+
+                    getMainData() {
+                        var self = this;
+                        var postData = window.base.cloneForm(self.paginate);
+                        postData.searchItem = window.base.cloneForm(self.searchItem);
+                        var callback = (res)=>{
+                            self.mainData = res.data;
+                            self.paginate['count'] = res.total;
+                            window.base.computePageArr(self);
+                        };
+                        window.base.articleList(postData,callback);
+                    },
+                    
+
+                    getBannerData() {
+                        var self = this;
+                        
+                        var postData = {
+                            count: 0,
+                            currentPage: 1,
+                            pagesize:6,
+                            is_page:true,
+                            searchItem:{
+                                thirdapp_id:25,
+                                id:558
+                            }
+                        };
+
+                        var callback = (res)=>{
+                            self.bannerData = res.data;
+                            console.log(self.bannerData)
+                        };
+                        window.base.articleList(postData,callback);
+                    },
+
+                    getCaseData() {
+                        var self = this;
+                        
+                        var postData = {
+                           thirdapp_id:25,
+                            count: 0,
+                            currentPage: 1,
+                            pagesize:6,
+                            is_page:true,
+                            searchItem:{ 
+                                theme_id:35
+                            }
+                        };
+
+                        var callback = (res)=>{
+                            self.caseData = res.data;
+                        };
+                        window.base.themeList(postData,callback);
+                    },
+
+                    getIntroduceData() {
+                        var self = this;
+                        
+                        var postData = {
+                            thirdapp_id:25,
+                            count: 0,
+                            currentPage: 1,
+                            pagesize:6,
+                            is_page:true,
+                            searchItem:{
+                                theme_id:37
+                            }
+                        };
+
+                        var callback = (res)=>{
+                            self.introduceData = res.data;
+                        };
+                        window.base.themeList(postData,callback);
+                    },
+                    
+                    getCultureData() {
+                        var self = this;
+                        
+                        var postData = {
+                            count: 0,
+                            currentPage: 1,
+                            pagesize:6,
+                            is_page:true,
+                            searchItem:{
+                                thirdapp_id:25,
+                                id:577
+                            }
+                        };
+
+                        var callback = (res)=>{
+                            self.cultureData = res.data;
+                        };
+                        window.base.articleList(postData,callback);
+                    },
+
+                    getHonorData() {
+                        var self = this;
+                        
+                        var postData = {
+                            thirdapp_id:25,
+                            count: 0,
+                            currentPage: 1,
+                            pagesize:6,
+                            is_page:true,
+                            searchItem:{
+                               theme_id:36
+                            }
+                        };
+
+                        var callback = (res)=>{
+                            self.honorData = res.data;
+                        };
+                        window.base.themeList(postData,callback);
+                    },
+
+                    getMessage(){
+                        var self = this;
+                        var Name =$("#name").val();
+                        var Phone =$("#phone").val();
+                        var Messages =$("#mesCont").val();
+                        console.log(999);
+                        var postData = {
+                            count: 0,
+                            currentPage: 1,
+                            pagesize:6,
+                            is_page:true,
+                            "thirdapp_id":25,
+                            "name":Name,
+                            "content":Messages,
+                            "phone":Phone
+                        };
+                        
+
+                        var callback = (res)=>{
+                            self.messData = res.data;
+                        };
+                        window.base.messages(postData,callback);
+                    },
+                    
+                    getThemeJob(){                
+                        var self = this;
+                        
+                        var postData = {
+                            thirdapp_id:25,
+                            count: 0,
+                            currentPage: 1,
+                            pagesize:6,
+                            is_page:true,
+                            searchItem:{ 
+                                theme_id:34
+                            }
+                        };
+
+                        var callback = (res)=>{
+                            self.themeJOb = res.data;
+                        };
+                        window.base.themeList(postData,callback);
+                    },
+
+                    changePage(e){
+                        var self = this;
+                        var dataSet = window.base.getDataSet(e);
+                        window.base.changePage(dataSet,self);
+                    },
+
+                    changeMenu(e){
+                        var self = this;
+                        self.paginate = {
+                            count: 0,
+                            currentPage: 1,
+                            pagesize: 6,
+                            is_page: true,
+                        };
+                        self.searchItem.menu_id  = window.base.getDataSet(e).id;
+                        self.getMainData();
+                    },
+
+                    linkTo(e){
+                        var self = this;
+                        console.log(e);
+                        self.linkPage = window.base.getDataSet(e).page;
+                        window.base.linkTo(self);
+                        
+                    },
+                    intoDetail(e){
+            
+                        var self = this;            
+                        var art_id = window.base.getDataSet(e).id;
+                        console.log(window.base.getDataSet(e));
+                        window.location.href="./humanResouce.html?id="+art_id;
+                      },
+
+                    intoDetail1(e){
+            
+                        var self = this;            
+                        var art_id = window.base.getDataSet(e).id;
+                        console.log(window.base.getDataSet(e));
+                        window.location.href="./honors.html?id="+art_id;
+                      },
+                }
+            });
+
+            
+            //-----banner-------
+            //-----电话--------
+                        
+            $('.bot_phone').click(function(){
+                    $('.link_phone').slideToggle();
+            })
+            
+            
+        </script>
+
+
+<!-- <script type="text/javascript">
+window.scrollReveal = new scrollReveal({reset: true});
+$(window).resize(function(){	
+	window.location.reload(); //刷新当前页面	
+});
+</script> -->
+<script type="text/javascript">         
+    // 等待所有加载
+    $(window).load(function(){
+        $('body').addClass('loaded');
+        $('#loader-wrapper .load_title').remove();
+    }); 
+
+</script> 
+<script type="text/javascript">
+    (function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script type="text/javascript">
+    function showMenu(){
+        $(".dropdown-menu").css("display","block");
+    }
+     function hideMenu(){
+        $(".dropdown-menu").css("display","none");
+    }
+$(window).on('scroll', function() {
+    var introduce = document.getElementById("introduce");
+    var introduceTop = introduce.offsetTop;
+    if ($(window).scrollTop() > introduceTop-200) {
+        $('.introduce_left').addClass('fadeInleft');
+        $('.intro_right').addClass('fadeInright');
+        $('.culture_left').addClass('fadeInleft');
+        $('.culture_right').addClass('fadeInright');
+
+    } else {
+        $('.introduce_left').removeClass('fadeInleft');
+        $('.intro_right').removeClass('fadeInright');
+        $('.culture_left').removeClass('fadeInleft');
+        $('.culture_right').removeClass('fadeInright');
+    }
+
+    var resuilts = document.getElementById("resuilts");
+    var resuiltsTop = resuilts.offsetTop;
+    if ($(window).scrollTop() > resuiltsTop-200) {
+        $('.case1').addClass('fadeInUpQuick');
+        $('.caseTleft').addClass('fadeInUpQuick');
+        $('.caseTright').addClass('fadeInUpQuick');
+        $('.caseBleft').addClass('fadeInUpQuick');
+        $('.caseBright').addClass('fadeInUpQuick');
+
+    } else {
+        $('.case1').removeClass('fadeInUpQuick');
+        $('.caseTleft').removeClass('fadeInUpQuick');
+        $('.caseTright').removeClass('fadeInUpQuick');
+         $('.caseBleft').removeClass('fadeInUpQuick');
+        $('.caseBright').removeClass('fadeInUpQuick');
+    }
+    var companyJob = document.getElementById("companyJob");
+    var companyJob = companyJob.offsetTop;
+    if ($(window).scrollTop() > companyJob-200) {
+        $('.jobUserSort').addClass('fadeInTop');
+       
+
+    } else {
+        $('.jobUserSort').removeClass('fadeInTop');
+       
+    }
+    var onlineMess = document.getElementById("onlineMess");
+    var onlineMess = onlineMess.offsetTop;
+    if ($(window).scrollTop() > onlineMess-200) {
+        $('.honor').addClass('fadeInLeftShort');
+       
+
+    } else {
+        $('.honor').removeClass('fadeInLeftShort');
+       
+    }
+});
+
+// var service = document.getElementById("service");
+//     var serviceTop = service.offsetTop;
+//     if ($(window).scrollTop() > serviceTop-200) {
+
+//         $('.description_item').addClass('descriptionItmAnim');
+//     } else {
+//         $('.description_item').removeClass('descriptionItmAnim');
+//     }
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<head>
+<title>网站地图 - v2.0</title>
+<meta http-equiv="Content-type" content="text/html;" charset="utf-8" />
+<style>
+body{font-family: Arial, "微软雅黑";font-size: 13px;}
+ul, li{margin:0px; padding:0px; list-style:none;}ul{width:800px;margin-left: auto;margin-right: auto;}.title{width:800px}.lks{float: left;padding-right: 3px;padding-left: 3px;}
+</style>
+</head><body align="center">
+<ul><li class="title"><h3>www.gaolianjs.com网站地图：(2018-06-27 22:36:25)</h3></li>
+<li class="lks">0、<a href="http://www.gaolianjs.com">高联建设</a></li>
+<li class="lks">1、<a href="http://www.gaolianjs.com/"><b style="color:red">标题为空</b></a></li>
+<li class="lks">2、<a href="http://www.gaolianjs.com/./index.html/">首页</a></li>
+<li class="lks">3、<a href="http://www.gaolianjs.com/./introduce.html/">企业概况</a></li>
+<li class="lks">4、<a href="http://www.gaolianjs.com/.introduce.html/">公司简介</a></li>
+<li class="lks">5、<a href="http://www.gaolianjs.com/">企业文化</a></li>
+<li class="lks">6、<a href="http://www.gaolianjs.com/">发展历程</a></li>
+<li class="lks">7、<a href="http://www.gaolianjs.com/">认证体系</a></li>
+<li class="lks">8、<a href="http://www.gaolianjs.com/./introduce.html/">公司简介</a></li>
+<li class="lks">9、<a href="http://www.gaolianjs.com/./introduce.html/">企业文化</a></li>
+<li class="lks">10、<a href="http://www.gaolianjs.com/./introduce.html/">发展历程</a></li>
+<li class="lks">11、<a href="http://www.gaolianjs.com/./introduce.html/">认证体系</a></li>
+<li class="lks">12、<a href="http://www.gaolianjs.com/./results.html/">业绩展示</a></li>
+<li class="lks">13、<a href="http://www.gaolianjs.com/./humanresouce.html/">人力资源</a></li>
+<li class="lks">14、<a href="http://www.gaolianjs.com/./honors.html/">荣誉资质</a></li>
+<li class="lks">15、<a href="http://www.gaolianjs.com/./message.html/">在线留言</a></li>
+<li class="lks">16、<a href="http://www.gaolianjs.com/./contact.html/">联系方式</a></li>
+<li class="lks">17、<a href="http://www.gaolianjs.com/">
+        
+        previous
+    </a></li>
+<li class="lks">18、<a href="http://www.gaolianjs.com/">
+        
+        next
+    </a></li>
+<li class="lks">19、<a href="http://www.gaolianjs.com/./introduce.html/">
+                            {{introducedata[0].relationinfo.title}}
+                            
+                            
+                    </a></li>
+<li class="lks">20、<a href="http://www.gaolianjs.com/./introduce.html/">
+                                {{introducedata[1].relationinfo.title}}
+                                
+                                
+                        </a></li>
+<li class="lks">21、<a href="http://www.gaolianjs.com/./results.html/"> 
+                
+            
+            
+                
+                    
+                       
+                      </a></li>
+<li class="lks">22、<a href="http://www.gaolianjs.com/./results.html/">   
+                    
+                
+                
+                     
+                      
+                       </a></li>
+<li class="lks">23、<a href="http://www.gaolianjs.com/./results.html/"> 
+                    
+                
+            
+        
+
+ 
+
+    
+        
+            人才招聘
+        
+        
+            
+                 
+                    
+                        
+                    
+                    
+                        {{item.name}}
+                        
+                        
+                    
+                     立即加入</a></li>
+</ul></body></html>
